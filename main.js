@@ -1,13 +1,12 @@
-function tocaSomAplauso(){
-    document.querySelector("#som_tecla_Aplauso").play();
+function tocaSom(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla')
-listaDeTeclas[2].onclick = tocaSomAplauso
 
 let contador = 0;
 //Estrutura de Repetição - Enquanto
-while (contador<9){
-    listaDeTeclas[0].onclick = tocaSomAplauso
+while (contador<listaDeTeclas.length){
+    listaDeTeclas[contador].onclick = tocaSomAplauso
     contador = 1;
 }
